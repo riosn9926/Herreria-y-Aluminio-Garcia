@@ -370,55 +370,39 @@ textarea{
     opacity: .2;
 }
 .content-contact{
-    display: flex;
-    flex-direction: column;
-    /* justify-content: space-evenly; */
-    padding: 2rem;
-}
-.location{
-    display: flex;
-    flex-direction: column;
-    gap: .5rem;
+    display: grid;
     text-align: center;
+    grid-template-columns: repeat(1, 1fr);
+    padding: 2rem;
+    gap: 1rem;
 }
-.location h3{
+.content-contact p{
     color: var(--white-color);
+}
+.info-location{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
 }
 .location p{
-    /* width: 50%; */
-    color: var(--white-color);
-}
-.location iframe{
-    width: 85vw;
-    height: 30vh;
-}
-.icons{
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    text-align: center;
-    margin-top: 2rem;
-}
-.icons-content{
-    display: flex;
-    flex-direction: column;
-    gap: .5rem;
-}
-.icons p{
-    color: var(--white-color);
+    margin-bottom: 1rem;
 }
 .phones a{
-    text-decoration: none;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: .5rem;
 }
-.phones svg{
-    color: var(--white-color);
+.phones{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.phones p{
-    color: var(--white-color);
+.phones a{
+    text-decoration: none;
 }
 
 /************************ICON WHASTAPP**********************/
@@ -562,10 +546,6 @@ textarea{
     .contact .section-title{
         font-size: 20px;
     }
-    .location iframe{
-        width: 90vw;
-        height: 30vh;
-    }
 }
 /* Large tablets/laptops*/
 @media (min-width: 992px) and (max-width:1199px){
@@ -625,9 +605,8 @@ textarea{
     .contact .section-title{
         font-size: 24px;
     }
-    .location iframe{
-        width: 92vw;
-        height: 30vh;
+    .content-contact{
+        grid-template-columns: repeat(3, 33%);
     }
 }
 
@@ -666,7 +645,6 @@ textarea{
         margin-right: auto;
     }
     .start{
-        /* padding: 2rem; */
         flex-direction: row;
     }
     .about-image-content{
@@ -691,20 +669,6 @@ textarea{
     .contact .section-title{
         font-size: 28px;
     }
-    .content-contact{
-        flex-direction: row;
-        justify-content: space-evenly;
-    }
-    .location iframe{
-        width: 400px;
-        height: 250px;
-    }
-    .location p{
-        width: 50%;
-    }
-    .location{
-        text-align: left;
-    }
     .btn-wsp{
         width:60px;
         height:60px; 
@@ -714,7 +678,11 @@ textarea{
     .about-image-title{
         font-size: 2rem;
     }
+    .content-contact{
+        grid-template-columns: repeat(3, 33%);
+    }
 }
+
 
 
 
@@ -789,18 +757,7 @@ textarea{
         font-size: 32px;
     }
     .content-contact{
-        flex-direction: row;
-        justify-content: space-evenly;
-    }
-    .location iframe{
-        width: 400px;
-        height: 250px;
-    }
-    .location p{
-        width: 50%;
-    }
-    .location{
-        text-align: left;
+        grid-template-columns: repeat(3, 33%);
     }
     .btn-wsp{
         width:60px;
