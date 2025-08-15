@@ -50,7 +50,7 @@ body{
     width: 100%;
     height: 6rem;
     padding: 1rem;
-    position: sticky;
+    position: fixed;
     top: 0;
     z-index: 999;
     box-shadow: rgba(0, 0, 0, 0.15) 0px 1px 2px 0px;
@@ -448,6 +448,23 @@ textarea{
 
 /* cellphone */
 @media screen and (max-width: 790px){
+    .start-image img{
+        width: 100%;
+    }
+    .service-content{
+        align-items: center;
+        justify-content: center;
+        grid-template-columns: repeat(1, 90%);
+    }
+    .right-services img{
+        width: 100%;
+    }
+    .hero-image-title{
+        padding: 0 1rem;
+    }
+    .contact-text{
+        text-align: center;
+    }
     .menu{
         z-index: 999;
 		display: block;
